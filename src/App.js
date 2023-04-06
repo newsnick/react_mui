@@ -1,10 +1,10 @@
 import './styles/App.scss'
-import MenuBar from './UI/MenuBar/MenuBar'
+import Home from './pages/Home/Home'
 
 function App() {
   return (
     <div className="App">
-      <MenuBar />
+      <Home />
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
-import MenuBar from '../../UI/MenuBar/MenuBar.jsx'
+import LayoutHome from '../../components/LayoutHome/LayoutHome.jsx'
+//import { Layout } from 'antd'
 
 const Home = () => {
   return (
     <div>
-      <MenuBar />
+      <LayoutHome />
     </div>
   )
 }

@@ -1,12 +1,18 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { Layout, Menu, theme } from 'antd'
 import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
+  ControlTwoTone,
 } from '@ant-design/icons'
-import { Layout, Menu, theme } from 'antd'
 import ResponsiveAppBar from '../Header/Header'
 import ResponsiveStack from '../Stack/Stack'
+import StackArray from '../StackArray/StackArray'
+import DatePicker from '../DatePicker/DatePicker'
+import AntdDropdown from '../AntdDropdown/AntdDropdown'
+import styles from '../../styles/LayoutHome/LayoutHome.module.scss'
 
 const { Header, Content, Footer, Sider } = Layout
 
@@ -56,7 +62,14 @@ const LayoutHome = () => {
               background: colorBgContainer,
             }}
           >
-            <ResponsiveStack /> <ResponsiveStack /> <ResponsiveStack />
+            <StackArray
+              item1={[
+                <AntdDropdown className={styles.dropdown} />,
+                <DatePicker className={styles.datepicker} />,
+                <ControlTwoTone className={styles.controlicon} />,
+              ]}
+            />
+            <ResponsiveStack /> <ResponsiveStack />
             <ResponsiveStack />
           </div>
         </Content>

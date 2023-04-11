@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+//import { useSelector } from 'react-redux'
 import { Layout, Menu, theme } from 'antd'
 import {
   UploadOutlined,
@@ -13,6 +13,8 @@ import StackArray from '../StackArray/StackArray'
 import DatePicker from '../DatePicker/DatePicker'
 import AntdDropdown from '../AntdDropdown/AntdDropdown'
 import styles from '../../styles/LayoutHome/LayoutHome.module.scss'
+import Statistics from '../Statistics/Statistics'
+import image1 from '../../assets/images/pv.svg'
 
 const { Header, Content, Footer, Sider } = Layout
 
@@ -69,7 +71,13 @@ const LayoutHome = () => {
                 <ControlTwoTone className={styles.controlicon} />,
               ]}
             />
-            <ResponsiveStack /> <ResponsiveStack />
+            <ResponsiveStack
+              className={styles.stack2}
+              item1={<Statistics item1="Page Views" item2="281358" />}
+              item2={<Statistics item1="Visits" item2="251901" />}
+              item3={<Statistics item1="Unique Visitors" item2="25135" />}
+            />
+            <ResponsiveStack />
             <ResponsiveStack />
           </div>
         </Content>

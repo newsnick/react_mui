@@ -31,3 +31,13 @@
 [https://ant.design/components/date-picker]
 
 [https://mui.com/x/react-date-pickers/getting-started/]
+
+#### Statistics
+
+[https://ant.design/components/statistic]
+
+#### Charts
+
+[https://recharts.org/en-US/guide/installation]
+
+[https://recharts.org/en-US/examples]

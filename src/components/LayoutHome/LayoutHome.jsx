@@ -10,11 +10,13 @@ import {
 import ResponsiveAppBar from '../Header/Header'
 import ResponsiveStack from '../Stack/Stack'
 import StackArray from '../StackArray/StackArray'
+import StackVertical from '../StackVertical/StackVertical'
 import DatePicker from '../DatePicker/DatePicker'
 import AntdDropdown from '../AntdDropdown/AntdDropdown'
 import styles from '../../styles/LayoutHome/LayoutHome.module.scss'
 import Statistics from '../Statistics/Statistics'
-import image1 from '../../assets/images/pv.svg'
+import BarChartComponent from '../BarChartComponent/BarChartComponent'
+import SelectPeriod from '../SelectPeriod/SelectPeriod'
 
 const { Header, Content, Footer, Sider } = Layout
 
@@ -77,7 +79,12 @@ const LayoutHome = () => {
               item2={<Statistics item1="Visits" item2="251901" />}
               item3={<Statistics item1="Unique Visitors" item2="25135" />}
             />
-            <ResponsiveStack />
+
+            <StackVertical
+              className={styles.chartcontainer}
+              item1={[<SelectPeriod />, <BarChartComponent />]}
+            />
+
             <ResponsiveStack />
           </div>
         </Content>

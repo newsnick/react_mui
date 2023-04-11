@@ -41,3 +41,9 @@
 [https://recharts.org/en-US/guide/installation]
 
 [https://recharts.org/en-US/examples]
+
+[https://www.react-google-charts.com/examples/pie-chart]
+
+#### Period Selector
+
+[https://ant.design/components/radio]

@@ -17,6 +17,9 @@ import styles from '../../styles/LayoutHome/LayoutHome.module.scss'
 import Statistics from '../Statistics/Statistics'
 import BarChartComponent from '../BarChartComponent/BarChartComponent'
 import SelectPeriod from '../SelectPeriod/SelectPeriod'
+import DonutChart from '../DonutChart/DonutChart'
+import TableData from '../TableData/TableData'
+import PieChart from '../PieChart/PieChart'
 
 const { Header, Content, Footer, Sider } = Layout
 
@@ -79,13 +82,16 @@ const LayoutHome = () => {
               item2={<Statistics item1="Visits" item2="251901" />}
               item3={<Statistics item1="Unique Visitors" item2="25135" />}
             />
-
-            <StackVertical
-              className={styles.chartcontainer}
-              item1={[<SelectPeriod />, <BarChartComponent />]}
-            />
-
-            <ResponsiveStack />
+            <div className={styles.chartcontainer}>
+              <StackVertical
+                item1={[<SelectPeriod />, <BarChartComponent />]}
+              />
+              <StackArray item1={[<DonutChart />]} />
+            </div>
+            <div className={styles.chartcontainer}>
+              <StackArray item1={[<TableData />]} />
+              <StackArray item1={[<PieChart />]} />
+            </div>
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}></Footer>

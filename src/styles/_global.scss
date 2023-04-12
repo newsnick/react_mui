@@ -1,4 +1,5 @@
 $bodybg: #f5f8fa;
+$stackcolor: #fff;
 
 * {
   margin: 0;
@@ -12,4 +13,17 @@ html {
 
 body {
   background: $bodybg;
+  font-family: Apple-System, Arial, Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', STXihei, sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+@mixin stackcontainer {
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100px;
+  background-position: left;
+  padding: 10px 15px 10px;
 }

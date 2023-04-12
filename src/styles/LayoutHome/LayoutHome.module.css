@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #f5f8fa;
+  font-family: Apple-System, Arial, Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", STXihei, sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.controlicon {
+  width: 30px;
+  font-size: 31px;
+  margin-left: 550px;
+}
+
+.stack2 {
+  margin-top: 5%;
+  color: #fff;
+}
+
+.chartcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

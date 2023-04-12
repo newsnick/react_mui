@@ -1,6 +1,6 @@
 @import '../_global.scss';
 
-.title {
-  white-space: nowrap;
+.box {
   background-image: url(/assets/images/pv.svg);
+  @include stackcontainer;
 }

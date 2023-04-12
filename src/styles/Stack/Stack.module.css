@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #f5f8fa;
+  font-family: Apple-System, Arial, Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", STXihei, sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.stack {
+  margin-top: 20px;
+}
+
+.itembox1 {
+  background: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: right;
+  padding: 200px 100px;
+}

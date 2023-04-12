@@ -28,6 +28,12 @@ const LayoutHome = () => {
     token: { colorBgContainer },
   } = theme.useToken()
 
+  const customTitleStyles = {
+    color: 'white',
+    padding: '10px',
+    marginLeft: '130px',
+  }
+
   return (
     <Layout>
       <Sider
@@ -76,11 +82,33 @@ const LayoutHome = () => {
                 <ControlTwoTone className={styles.controlicon} />,
               ]}
             />
-            <ResponsiveStack
+            {/* <ResponsiveStack
               className={styles.stack2}
               item1={<Statistics item1="Page Views" item2="281358" />}
               item2={<Statistics item1="Visits" item2="251901" />}
               item3={<Statistics item1="Unique Visitors" item2="25135" />}
+            /> */}
+            <ResponsiveStack
+              className={styles.stack2}
+              item1={
+                <Statistics
+                  item1={<span style={customTitleStyles}>Page Views</span>}
+                  item2="281358"
+                />
+              }
+              item2={
+                <Statistics
+                  className={styles.bgbox2}
+                  item1={<span style={customTitleStyles}>Visits</span>}
+                  item2="251901"
+                />
+              }
+              item3={
+                <Statistics
+                  item1={<span style={customTitleStyles}>Unique Visitors</span>}
+                  item2="25135"
+                />
+              }
             />
             <div className={styles.chartcontainer}>
               <StackVertical

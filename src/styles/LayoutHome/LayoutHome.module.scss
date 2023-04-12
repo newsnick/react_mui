@@ -8,8 +8,17 @@
 
 .stack2 {
   margin-top: 5%;
+  color: $stackcolor;
 }
 
 .chartcontainer {
   display: flex;
+}
+
+.item2 {
+  margin-left: 200px;
+}
+
+.bgbox2 {
+  background-image: url(/assets/images/uv.svg);
 }

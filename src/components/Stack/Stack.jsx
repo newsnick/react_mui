@@ -25,9 +25,9 @@ export default function ResponsiveStack(props) {
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 2, md: 4 }}
       >
-        <Item>{item1}</Item>
-        <Item>{item2}</Item>
-        <Item>{item3}</Item>
+        <Item className={styles.itembox1}>{item1}</Item>
+        <Item className={styles.itembox2}>{item2}</Item>
+        <Item className={styles.itembox3}>{item3}</Item>
       </Stack>
     </div>
   )

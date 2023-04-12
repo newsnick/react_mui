@@ -20,6 +20,7 @@ import SelectPeriod from '../SelectPeriod/SelectPeriod'
 import DonutChart from '../DonutChart/DonutChart'
 import TableData from '../TableData/TableData'
 import PieChart from '../PieChart/PieChart'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const { Header, Content, Footer, Sider } = Layout
 
@@ -27,6 +28,8 @@ const LayoutHome = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken()
+
+  const newColorBgContainer = '#fff'
 
   const customTitleStyles = {
     color: 'white',
@@ -37,8 +40,10 @@ const LayoutHome = () => {
   return (
     <Layout>
       <Sider
+        style={{ padding: 0, background: newColorBgContainer }}
         breakpoint="lg"
         collapsedWidth="0"
+        collapsible="true"
         onBreakpoint={(broken) => {
           console.log(broken)
         }}
@@ -46,11 +51,11 @@ const LayoutHome = () => {
           console.log(collapsed, type)
         }}
       >
-        <div className="logo" />
+        <div className={styles.logo} />
         <Menu
-          theme="dark"
+          theme="light"
           mode="inline"
-          defaultSelectedKeys={['4']}
+          defaultSelectedKeys={['6']}
           items={[
             UserOutlined,
             VideoCameraOutlined,
@@ -63,7 +68,7 @@ const LayoutHome = () => {
           }))}
         />
       </Sider>
-      <Layout>
+      <Layout style={{ background: '#f5f8fa' }}>
         <Header style={{ padding: 0, background: colorBgContainer }}>
           <ResponsiveAppBar />
         </Header>
@@ -72,7 +77,7 @@ const LayoutHome = () => {
             style={{
               padding: 24,
               minHeight: 360,
-              background: colorBgContainer,
+              background: '#f5f8fa',
             }}
           >
             <StackArray

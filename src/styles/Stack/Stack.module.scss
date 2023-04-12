@@ -2,14 +2,11 @@
 
 .stack {
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .itembox1 {
   background: linear-gradient(87deg, #f5365c 0, #f56036 100%);
-  border-radius: 6px;
-  overflow: hidden;
-  text-align: right;
-  padding: 200px 100px;
 }
 
 .itembox2 {
@@ -18,4 +15,12 @@
 
 .itembox3 {
   background: linear-gradient(87deg, #11cdef 0, #1171ef 100%);
+}
+
+.itembox1,
+.itembox2,
+.itembox3 {
+  box-shadow: none;
+  border-radius: 8px !important;
+  overflow: hidden;
 }

@@ -1,8 +1,8 @@
 @import '../_global.scss';
 
-.donutchart {
+.piechart {
   display: flex;
   flex-direction: column;
-  margin-top: -10px;
-  font-family: 'Roboto', Helvetica;
+  margin-top: -8px;
+  font-weight: 400 !important;
 }

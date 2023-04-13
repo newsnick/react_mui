@@ -56,7 +56,12 @@ const data = [
 const options = {
   title: 'Traffic Sources',
   titleTextStyle: {
-    color: '#333',
+    paddingTop: '-10px',
+    color: 'grey',
+    fontFamily: 'sans-serif',
+    fontSize: '14',
+    fontWeight: '400',
+    lineHeight: '1.43',
   },
   legend: {
     position: 'bottom',
@@ -72,9 +77,10 @@ const options = {
 const DonutChart = () => {
   return (
     <Chart
+      className={styles.donutchart}
       chartType="PieChart"
       width="100%"
-      height="400px"
+      height="382px"
       data={data}
       options={options}
     />

@@ -12,9 +12,16 @@ import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
+import Badge from '@mui/material/Badge'
+import MailIcon from '@mui/icons-material/Mail'
+import NotificationsIcon from '@mui/icons-material/Notifications'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import SettingsIcon from '@mui/icons-material/Settings'
+import AvatarImage from '../../assets/images/avatar.svg'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-const pages = ['Products', 'Pricing', 'Blog']
+const pages = ['Users Table', 'Browser Chart', 'Traffic Stats']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 function ResponsiveAppBar() {
@@ -54,12 +61,12 @@ function ResponsiveAppBar() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'primary',
+
+              color: 'black',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Dashboard
           </Typography>
 
           <Box
@@ -74,7 +81,7 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="primary"
+              color="black"
             >
               <MenuIcon />
             </IconButton>
@@ -116,7 +123,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
@@ -127,7 +134,11 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: '#69b1ff',
+                  display: 'block',
+                }}
               >
                 {page}
               </Button>
@@ -135,11 +146,50 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+            <IconButton color="info">
+              <Badge>
+                <FavoriteBorderIcon color="warning" />
+              </Badge>
+            </IconButton>
+            <IconButton color="primary">
+              <Badge badgeContent={4} color="error">
+                <MailIcon color="primary" />
+              </Badge>
+            </IconButton>
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="primary"
+            >
+              <Badge badgeContent={17} color="error">
+                <NotificationsIcon color="primary" />
+              </Badge>
+            </IconButton>
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="primary"
+            >
+              <Badge color="primary">
+                <GitHubIcon color="primary" />
+              </Badge>
+            </IconButton>
+            <IconButton color="primary">
+              <Badge>
+                <SettingsIcon color="primary" />
+              </Badge>
+            </IconButton>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 2 }}>
+                <Avatar
+                  color="primary"
+                  sx={{ backgroundColor: '#1976d2' }}
+                  alt="Remy Sharp"
+                  src={AvatarImage}
+                />
               </IconButton>
             </Tooltip>
+
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"

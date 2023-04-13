@@ -8,7 +8,7 @@ const data = [
   ['Firefox', 13],
   ['Safari', 15],
   ['Opera', 16],
-  ['Safari', 20],
+  ['Safari', 19],
   ['Other', 15],
 ]
 

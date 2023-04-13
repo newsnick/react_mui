@@ -18,7 +18,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import SettingsIcon from '@mui/icons-material/Settings'
-import AvatarImage from '../../assets/images/avatar.svg'
+import AvatarImage from '../../assets/images/avatar.png'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const pages = ['Users Table', 'Browser Chart', 'Traffic Stats']
@@ -181,12 +181,7 @@ function ResponsiveAppBar() {
             </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 2 }}>
-                <Avatar
-                  color="primary"
-                  sx={{ backgroundColor: '#1976d2' }}
-                  alt="Remy Sharp"
-                  src={AvatarImage}
-                />
+                <Avatar color="inherit" alt="Remy Sharp" src={AvatarImage} />
               </IconButton>
             </Tooltip>
 

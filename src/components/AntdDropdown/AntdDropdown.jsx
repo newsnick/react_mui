@@ -47,22 +47,6 @@ const AntdDropdown: React.FC = () => (
     <Dropdown menu={{ items }} placement="bottomLeft" arrow>
       <Button className={styles.dropdown}>bottomLeft</Button>
     </Dropdown>
-    {/*  <Dropdown menu={{ items }} placement="bottom" arrow>
-      <Button>bottom</Button>
-    </Dropdown>
-    <Dropdown menu={{ items }} placement="bottomRight" arrow>
-      <Button>bottomRight</Button>
-    </Dropdown>
-    <br />
-    <Dropdown menu={{ items }} placement="topLeft" arrow>
-      <Button>topLeft</Button>
-    </Dropdown>
-    <Dropdown menu={{ items }} placement="top" arrow>
-      <Button>top</Button>
-    </Dropdown>
-    <Dropdown menu={{ items }} placement="topRight" arrow>
-      <Button>topRight</Button>
-    </Dropdown> */}
   </>
 )
 

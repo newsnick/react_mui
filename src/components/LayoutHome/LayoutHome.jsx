@@ -1,11 +1,7 @@
 import React from 'react'
-import { Layout, Menu, theme } from 'antd'
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  ControlTwoTone,
-} from '@ant-design/icons'
+import { Layout, theme } from 'antd'
+import { ControlTwoTone } from '@ant-design/icons'
+import LightDarkTheme from '../LightDarkTheme/LightDarkTheme.jsx'
 import ResponsiveAppBar from '../Header/Header'
 import ResponsiveStack from '../Stack/Stack'
 import StackArray from '../StackArray/StackArray'
@@ -19,26 +15,18 @@ import SelectPeriod from '../SelectPeriod/SelectPeriod'
 import DonutChart from '../DonutChart/DonutChart'
 import TableData from '../TableData/TableData'
 import PieChart from '../PieChart/PieChart'
+import Copyright from '../Copyright/Copyright'
+import { colorBgContainer, customTitleStyles, useToken } from '../../utils.js'
 
 const { Header, Content, Footer, Sider } = Layout
 
 const LayoutHome = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken()
-
-  const newColorBgContainer = '#fff'
-
-  const customTitleStyles = {
-    color: 'white',
-    padding: '10px',
-    marginLeft: '130px',
-  }
+  const token = useToken()
 
   return (
     <Layout>
       <Sider
-        style={{ padding: 0, background: newColorBgContainer }}
+        style={{ padding: 0, background: colorBgContainer }}
         breakpoint="lg"
         collapsedWidth="0"
         collapsible="true"
@@ -50,21 +38,7 @@ const LayoutHome = () => {
         }}
       >
         <div className={styles.logo} />
-        <Menu
-          theme="light"
-          mode="inline"
-          defaultSelectedKeys={['6']}
-          items={[
-            UserOutlined,
-            VideoCameraOutlined,
-            UploadOutlined,
-            UserOutlined,
-          ].map((icon, index) => ({
-            key: String(index + 1),
-            icon: React.createElement(icon),
-            label: `nav ${index + 1}`,
-          }))}
-        />
+        <LightDarkTheme />
       </Sider>
       <Layout style={{ background: '#f5f8fa' }}>
         <Header style={{ padding: 0, background: colorBgContainer }}>
@@ -85,12 +59,7 @@ const LayoutHome = () => {
                 <ControlTwoTone className={styles.controlicon} />,
               ]}
             />
-            {/* <ResponsiveStack
-              className={styles.stack2}
-              item1={<Statistics item1="Page Views" item2="281358" />}
-              item2={<Statistics item1="Visits" item2="251901" />}
-              item3={<Statistics item1="Unique Visitors" item2="25135" />}
-            /> */}
+
             <ResponsiveStack
               className={styles.stack2}
               item1={
@@ -125,7 +94,9 @@ const LayoutHome = () => {
             </div>
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}></Footer>
+        <Footer className={styles.footer} style={{ textAlign: 'center' }}>
+          <StackArray item1={[<Copyright className={styles.copyright} />]} />
+        </Footer>
       </Layout>
     </Layout>
   )

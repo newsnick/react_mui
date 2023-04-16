@@ -21,6 +21,19 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import AvatarImage from './assets/images/avatar.png'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import type { ColumnsType } from 'antd/es/table'
+import { theme } from 'antd'
+
+export const colorBgContainer = '#fff'
+
+export const customTitleStyles = {
+  color: 'white',
+  padding: '10px',
+  marginLeft: '130px',
+}
+
+export const useToken = () => {
+  return theme.useToken()
+}
 
 export interface DataType {
   key: string;

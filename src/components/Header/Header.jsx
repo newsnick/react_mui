@@ -1,25 +1,26 @@
-import * as React from 'react'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Toolbar from '@mui/material/Toolbar'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import Menu from '@mui/material/Menu'
-import MenuIcon from '@mui/icons-material/Menu'
-import Container from '@mui/material/Container'
-import Avatar from '@mui/material/Avatar'
-import Button from '@mui/material/Button'
-import Tooltip from '@mui/material/Tooltip'
-import MenuItem from '@mui/material/MenuItem'
-import AdbIcon from '@mui/icons-material/Adb'
-import Badge from '@mui/material/Badge'
-import MailIcon from '@mui/icons-material/Mail'
-import NotificationsIcon from '@mui/icons-material/Notifications'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import SettingsIcon from '@mui/icons-material/Settings'
-import AvatarImage from '../../assets/images/avatar.png'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
+import {
+  React,
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  MenuIcon,
+  Container,
+  Avatar,
+  Button,
+  Tooltip,
+  MenuItem,
+  AdbIcon,
+  Badge,
+  MailIcon,
+  NotificationsIcon,
+  GitHubIcon,
+  FavoriteBorderIcon,
+  SettingsIcon,
+  AvatarImage,
+} from '../../utils.js'
 
 const pages = ['Users Table', 'Browser Chart', 'Traffic Stats']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']

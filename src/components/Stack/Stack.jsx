@@ -1,5 +1,3 @@
-import * as React from 'react'
-//import { useSelector } from 'react-redux'
 import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import { styled } from '@mui/material/styles'
@@ -13,11 +11,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }))
 
-export default function ResponsiveStack(props) {
-  const [item1, setItem1] = React.useState(props.item1)
-  const [item2, setItem2] = React.useState(props.item2)
-  const [item3, setItem3] = React.useState(props.item3)
-
+export default function ResponsiveStack({ item1, item2, item3 }) {
   return (
     <div>
       <Stack

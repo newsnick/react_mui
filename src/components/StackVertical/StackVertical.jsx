@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { useSelector } from 'react-redux'
 import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import { styled } from '@mui/material/styles'
@@ -13,9 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }))
 
-export default function StackVertical(props) {
-  const [item1, setItem1] = React.useState(props.item1)
-
+export default function StackVertical({ item1 }) {
   return (
     <div>
       <Stack

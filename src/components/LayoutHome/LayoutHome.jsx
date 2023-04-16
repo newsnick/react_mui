@@ -1,5 +1,4 @@
 import React from 'react'
-//import { useSelector } from 'react-redux'
 import { Layout, Menu, theme } from 'antd'
 import {
   UploadOutlined,
@@ -20,7 +19,6 @@ import SelectPeriod from '../SelectPeriod/SelectPeriod'
 import DonutChart from '../DonutChart/DonutChart'
 import TableData from '../TableData/TableData'
 import PieChart from '../PieChart/PieChart'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const { Header, Content, Footer, Sider } = Layout
 

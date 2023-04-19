@@ -174,6 +174,7 @@ export const options = {
   legend: {
     position: 'bottom',
     alignment: 'start',
+    width: '900px',
     textStyle: {
       whiteSpace: 'normal',
     },

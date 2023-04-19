@@ -54,9 +54,9 @@ const LayoutHome = () => {
           >
             <StackArray
               item1={[
-                <AntdDropdown className={styles.dropdown} />,
-                <DatePicker className={styles.datepicker} />,
-                <ControlTwoTone className={styles.controlicon} />,
+                <AntdDropdown key="dropdown" className={styles.dropdown} />,
+                <DatePicker key="datepicker" className={styles.datepicker} />,
+                <ControlTwoTone key="control" className={styles.controlicon} />,
               ]}
             />
 
@@ -64,12 +64,14 @@ const LayoutHome = () => {
               className={styles.stack2}
               item1={
                 <Statistics
+                  key="pageviews"
                   item1={<span style={customTitleStyles}>Page Views</span>}
                   item2="281358"
                 />
               }
               item2={
                 <Statistics
+                  key="visits"
                   className={styles.bgbox2}
                   item1={<span style={customTitleStyles}>Visits</span>}
                   item2="251901"
@@ -77,6 +79,7 @@ const LayoutHome = () => {
               }
               item3={
                 <Statistics
+                  key="uniquevisitors"
                   item1={<span style={customTitleStyles}>Unique Visitors</span>}
                   item2="25135"
                 />
@@ -84,13 +87,16 @@ const LayoutHome = () => {
             />
             <div className={styles.chartcontainer}>
               <StackVertical
-                item1={[<SelectPeriod />, <BarChartComponent />]}
+                item1={[
+                  <SelectPeriod key="selectperiod" />,
+                  <BarChartComponent key="barchart" />,
+                ]}
               />
-              <StackArray item1={[<DonutChart />]} />
+              <StackArray item1={[<DonutChart key="donutchart" />]} />
             </div>
             <div className={styles.chartcontainer}>
-              <StackArray item1={[<TableData />]} />
-              <StackArray item1={[<PieChart />]} />
+              <StackArray item1={[<TableData key="tabledata" />]} />
+              <StackArray item1={[<PieChart key="piechart" />]} />
             </div>
           </div>
         </Content>
